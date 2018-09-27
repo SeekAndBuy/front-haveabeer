@@ -15,6 +15,10 @@ export class UserService {
   constructor(private http: HttpClient) { }
 
   registerUser(user: User) {
-    return this.http.post(this.url_base + "/user/register", user);
+    return this.http.post(this.url_base + "/users/register", user);
+  }
+
+  getAllUsers() {
+    return this.http.get(this.url_base + "/users");
   }
 }
